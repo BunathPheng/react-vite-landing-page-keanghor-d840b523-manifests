@@ -1,0 +1,10 @@
+namespace: smartops-api
+
+image:
+  imageRepository: docker.io/phengbunath/react-vite-landing-page-keanghor-d840b523
+  tag: 1
+
+service:
+  type: ClusterIP
+  port: 5173
+  targetPort: 5173
