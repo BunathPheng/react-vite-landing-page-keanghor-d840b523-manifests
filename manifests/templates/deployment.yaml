@@ -1,0 +1,25 @@
+---
+# Source: helm for kubernetes/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-vite-landing-page-keanghor-d840b523
+  labels:
+    app: react-vite-landing-page-keanghor-d840b523
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: react-vite-landing-page-keanghor-d840b523
+  template:
+    metadata:
+      labels:
+        app: react-vite-landing-page-keanghor-d840b523
+    spec:
+      containers:
+        - name: react-vite-landing-page-keanghor-d840b523
+          image: docker.io/phengbunath/react-vite-landing-page-keanghor-d840b523:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5173
