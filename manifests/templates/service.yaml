@@ -1,0 +1,16 @@
+---
+# Source: helm for kubernetes/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-vite-landing-page-keanghor-d840b523          # Service name
+  labels:
+    app: react-vite-landing-page-keanghor-d840b523
+spec:
+  type: ClusterIP   # Service type (ClusterIP, NodePort, LoadBalancer)
+  selector:
+    app: react-vite-landing-page-keanghor-d840b523         # Matches Deployment labels
+  ports:
+    - protocol: TCP
+      port: 5173         # Service port
+      targetPort: 5173  # Target container port
